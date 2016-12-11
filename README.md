@@ -16,6 +16,6 @@ You can append several authors to book by clicking appropriate button ("+") and 
 Each new author field can be removed on form (button "-").<br>
 
 Underneath the grid, there is the field to input email (to register user). After it, user can display taken books and take new books (it will be displayed new button "Take book").
-User can't take the book which quantity is 0.<br>
+User can't take the book which quantity is 0. After taking a book, it will be sent message to user email.<br>
 
 In the right side of the screen there is book details (when and by whom was taken).
