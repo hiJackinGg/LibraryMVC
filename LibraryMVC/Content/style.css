@@ -1,0 +1,132 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#grid{
+    float:left;
+    width:75%;
+    overflow:hidden;
+}
+#note{
+    float:left;
+    width:25%;
+    overflow:hidden;
+} 
+
+#bookDiv{
+    opacity:0.92;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index:1;
+    display: none;
+}
+
+#book{
+    width:350px;
+    margin:0px;
+    background-color:white;
+    position: relative;
+    border: 5px solid rgb(90, 158, 181);
+}
+
+#book{
+    left: 50%;
+    top: 50%;
+    margin-left:-210px;
+    margin-top:-255px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #AFCDE7; 
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    transition-duration: 0.4s;
+    text-align: left;
+}
+
+.buttons button {
+    float:left;
+}
+
+.buttons {
+    border:none;
+}
+
+.buttons  button:hover  {
+    background-color: #AFCDE7; 
+    color: white;
+}
+
+button[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#next, #prev {
+    background-color: white;
+    color: black;
+    border: 2px solid black; 
+}
+
+table .quantity {
+    text-align: center;
+}
+
+td:focus {
+     border-width:3px 3px 3px 3px;
+}
+
+#booksGrid tr:last-child td {
+     border:none;
+     background-color: #AFCDE7; 
+     color: white;
+}
+
+table {
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+td,th {
+    border: 1px solid #AFCDE7;
+}
+
+th {
+    background: #AFCDE7;
+    color: white;
+    padding: 10px 20px;
+}
+    
+#add, #filter {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    color: black;
+    border: 2px solid #AFCDE7;
+}
+
+#add:hover {
+    background-color: #AFCDE7; 
+    color: white;
+}
+
+input {
+    border: 2px solid #AFCDE7;
+}

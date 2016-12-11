@@ -1,0 +1,76 @@
+﻿@model LibraryMVC.Models.BooksWithGridParams
+
+<table id="booksGrid">
+    <thead>
+        <tr>
+            <th>№</th>           
+            <th><a onclick="sort('title');return false;" class="sortLink" href="" id="sortByTitle">Book title</a></th>
+            <th>Quantity</th>
+            <th><a onclick="sort('author');return false;" class="sortLink" href="" id="sortByAuthor">Authors</a></th>
+         </tr>
+     </thead>
+     <tbody>
+
+         @{int num = @Model.PageNumber * @Model.PageSize;}                       
+         @foreach (var item in Model.Books) {
+             num++;
+             
+             <tr class="row">
+                 <td rowspan="@item.Authors.Count">
+                    @num
+                 </td>
+                <td rowspan="@item.Authors.Count">
+                    @item.Title
+                </td>
+                <td class="quantity" rowspan="@item.Authors.Count">
+                    @item.Quantity
+                </td>
+                <td>
+                    @item.Authors[0]
+                </td>
+                <td class="buttons" rowspan="@item.Authors.Count">
+                    <button onclick="bookDetails(@item.ID)" class="button-details">Details</button>
+                    <button onclick="deleteBook(@item.ID)" class="button-remove">Remove book</button>
+                    <button onclick="changeQuantity(this, @item.ID)" class="button-edit">Change qty</button>
+                    @if (Session["user_email"] != null){
+                        var f = @item.Quantity <= 0;
+                        <button disabled="@f" onclick="takeBook(this, @item.ID)" class="button-take">Take book</button>
+                     }
+                </td>
+              </tr>
+             
+              for (int i = 1; i < @item.Authors.Count; i++) {
+                  <tr>
+                     <td>
+                        @item.Authors[i]
+                     </td>
+                  </tr>
+              }
+              
+          } 
+
+
+                @{int currentPage = Model.TotalPages == 0 ? 0 : Model.PageNumber + 1;
+                int totalPages = Model.TotalPages;
+                var stopPrev = Model.PageNumber <= 0;
+                var stopNext = @currentPage >= @totalPages;
+                }
+
+                 <tr> 
+                    <td colspan=4>
+                        <button disabled="@stopPrev" onclick="prev()" id="prev" type="button" >Back</button>
+                        @currentPage / @totalPages
+                        <button disabled="@stopNext" onclick="next()" id="next" type="button" >Next</button>
+                    </td>
+                 </tr>
+
+       </tbody>
+</table>
+
+
+
+
+
+
+
+

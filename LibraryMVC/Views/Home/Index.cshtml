@@ -1,0 +1,80 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library</title>
+ 
+        <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/index.js")" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")" />
+
+    </head>
+
+<body>
+
+    <div id="grid">
+        <div id="bookDiv">
+            <form  action="/Home/Addbook" id="book" method="post">
+                <h3>Book Form</h3>
+                <hr/><br/>
+                <label>Title: <span>*</span></label><br/>
+                <input required type="text" id="Title" name="Title" placeholder="Book title"/><br/>
+                <br/>
+                <label>Author:</label><br/>
+                <div id="authorsDiv">
+                <input type="text" id="authors" name="authors" placeholder="Author name"/> 
+                <button type="button" id="appendAuthor">+</button><br/>
+                </div>
+                <br/>
+                <label>Quantity:</label><br/>
+                <input type="number" id="Quantity" name="Quantity" min="0" value="1" /><br/>         
+                <br/>
+                <input  type="submit" value="Send"/>
+                <input type="button" id="cancel" value="Cancel"/>
+                <br/>
+            </form>
+        </div>
+
+        <div>
+            <b>Filter by:</b>
+            <select id="filter">
+                <option selected value="1">all</option>
+                <option  value="2">in stock</option>
+                @if (Session["user_email"] != null){
+                  <option  value="3">Taken books</option>
+                }
+            </select>
+                <a id="add" href="Home/AddBook">Add new book</a>
+        </div><br>
+
+
+        <div id="container">
+ 
+        </div><br>
+
+
+        <div>
+            <label>Register yourself:</label><br>
+            <input id="email" type="email" required/>
+            <button id="login" type="button" >Log in</button>
+         </div><br />
+
+         <p id="user">@if (Session["user_email"] != null){<b>Your email is: </b>  @Session["user_email"]<br><span>Now you can take books.</span> }</p>
+            
+    </div>
+
+
+    <div id="note">
+        <p><b>Details:</b></p>
+        <div id="details">
+            
+        </div>
+    </div>
+
+    </body>
+</html>
