@@ -1,5 +1,20 @@
 # LibraryMVC
 
+<b><i>The application functionality:</i></b><br>
+<ul>
+<li>managing books available in the library: adding, removing, changing quantity. Each book
+can have a few authors, an author can write a few books;<br></li>
+<li>a book can be taken by different people and at different time;<br></li>
+<li>registration is required to take books (email);<br></li>
+<li>filter that shows all books / books available / books taken by the user;<br></li>
+<li>library tracks its readers (users). Displays a history of a book (when and by whom was taken);<br></li>
+<li>implemented sending notifications by mail to people who took a book (“You took the
+following books in our library”)<br></li>
+<li>on client side, it has a front-end page with grid. Grid allows paging,
+sorting by book titles and author names.<br></li>
+<li>requests to the server implemented via AJAX (like single-page app)<br></li>
+</ul>
+
 <b>Installation guide:</b><br>
 1. Download project.<br>
 2. To start project for sure, open it in Visual Studio (LibraryMVC.sln) and just run.<br>
