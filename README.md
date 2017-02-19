@@ -14,7 +14,18 @@ following books in our library”)<br></li>
 sorting by book titles and author names.<br></li>
 <li>requests to the server implemented via AJAX (like single-page app)<br></li>
 </ul>
-
+<b><i>Features:</i></b>
+<ul>
+<li>intensive usage of JDBC and SQL (crud, transactions, batch update, stored procedures, complex queries with window functions)<br></li>
+<li>effective memory usage (pagination on database side, retrieved only what it's needed to client)<br></li>
+<li>4 tables with relationships: one-to-many, many-to-many<br></li>
+<li>exception handling, HTTP codes status<br></li>
+<li>server- and client-side validation with appropriated error message to the user<br></li>
+<li>working with http sessions (autorisation)<br></li>
+<li>manual realisation of ajax table with pagination, filters, sorting<br></li>
+<li>intensive usage of AJAX<br></li>
+<li>intensive working with DOM model via javascript<br></li>
+</ul><br>
 <b>Installation guide:</b><br>
 1. Download project.<br>
 2. To start project for sure, open it in Visual Studio (LibraryMVC.sln) and just run.<br>
