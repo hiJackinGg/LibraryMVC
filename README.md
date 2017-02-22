@@ -16,7 +16,7 @@ sorting by book titles and author names.<br></li>
 </ul>
 <b><i>Features:</i></b>
 <ul>
-<li>intensive usage of JDBC and SQL (crud, transactions, batch update, stored procedures, complex queries with window functions)<br></li>
+<li>intensive usage of plain ADO.NET and SQL (crud, transactions, batch update, stored procedures, complex queries with window functions)<br></li>
 <li>effective memory usage (pagination on database side, retrieved only what it's needed to client)<br></li>
 <li>4 tables with relationships: one-to-many, many-to-many<br></li>
 <li>exception handling, HTTP codes status<br></li>
